@@ -1,6 +1,6 @@
-# Wolves of Democracy — Back-office d'administration (Blazor)
+# Wolves of Democracy — Application d'administration (Blazor)
 
-Application web d'administration du jeu **Wolves of Democracy**, un jeu de rôle social en ligne inspiré des *Loups-Garous de Thiercelieux*.
+Projet web d'administration du jeu **Wolves of Democracy**, un jeu de rôle social en ligne inspiré des *Loups-Garous de Thiercelieux*.
 Elle permet aux administrateurs de gérer les joueurs et de modérer les échanges du chat de partie.
 
 > Projet universitaire réalisé en équipe de 4 dans le cadre d'une SAÉ lors de mon BUT.
