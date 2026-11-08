@@ -68,10 +68,3 @@ Le système d'authentification fonctionne sur une autre branche mais par soucis 
 
 - Identifiant : `admin@test.com`
 - Mot de passe : `admin123`
-
-## 👥 Équipe
-
-- Najib Barbara
-- Cyril Barrallon
-- Neil Bonnetot
-- Anis Younes
