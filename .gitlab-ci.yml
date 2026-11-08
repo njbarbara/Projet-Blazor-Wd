@@ -1,0 +1,84 @@
+stages:
+  - 🏗️build
+  - 🧪tests
+  - scan
+  - 📦push
+  - 🚀deploy
+
+build:
+  image: mcr.microsoft.com/dotnet/sdk:9.0
+  stage: 🏗️build
+  script:
+    - cd BlazorSAE/
+    - dotnet restore BlazorSAE.sln
+    - dotnet build BlazorSAE.sln -c Release --no-restore
+
+tests:
+  image: mcr.microsoft.com/dotnet/sdk:9.0
+  stage: 🧪tests
+  script:
+    - cd BlazorSAE/
+    - dotnet restore BlazorSAE.sln
+    - dotnet test BlazorSAE.sln --no-restore
+
+sonarqube-check:
+  image: mcr.microsoft.com/dotnet/sdk:9.0
+  stage: scan
+  variables:
+    SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar"  # Defines the location of the analysis task cache
+    GIT_DEPTH: "0"  # Tells git to fetch all the branches of the project, required by the analysis task
+  cache:
+    key: "${CI_JOB_NAME}"
+    paths:
+      - .sonar/cache
+  script: 
+      - "apt-get update"
+      - "apt-get install --yes openjdk-17-jre"
+      - "dotnet tool install --global dotnet-sonarscanner"
+      - "export PATH=\"$PATH:$HOME/.dotnet/tools\""
+      - "cd BlazorSAE/"
+      - "dotnet sonarscanner begin /k:\"BlazorSAE\" /d:sonar.login=\"$SONAR_TOKEN\" /d:\"sonar.host.url=$SONAR_HOST_URL\" "
+      - "dotnet build"
+      - "dotnet sonarscanner end /d:sonar.login=\"$SONAR_TOKEN\""
+  allow_failure: true
+#  only:
+#    - main
+
+
+
+include:
+  - project: 'IUT_INF63/generic-ci' # Référence au projet gitlab contenant les scripts ci génériques
+    ref: 'main' # Référence à la branche du projet ci générique gitlab
+    file:
+      - 'build/.docker-build.yml' # Nom du fichier à inclure
+  - project: 'IUT_INF63/generic-ci'  # Référence au projet gitlab contenant les scripts ci génériques
+    ref: 'main' # Référence à la branche du projet ci générique gitlab
+    file:
+      - 'deploy/.docker-deploy.yml' # Nom du fichier à inclure
+
+# Ensuite dans votre .gitlab-ci.yml vous pouvez étendre cette job générique pour construire votre dockerfile en image docker
+push-dotnet-image:
+  extends: .build-and-push-docker-image # Étendre le job générique
+  stage: 📦push
+  variables: # Remplissez les variables dans cette section (veuillez vous référer à la documentation ci-dessous pour la liste complète)
+    DOCKERFILE_RELATIVE_PATH: BlazorSAE/BlazorSAE/Dockerfile # Emplacement du Dockerfile
+    DOCKERFILE_CONTEXT_PATH: . # Chemin du contexte de construction Docker
+    DESTINATION_REGISTRY_IMAGE_NAME: codefirst.iut.uca.fr/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME # Ici mettez l'adresse du conteneur quand il sera stocké dans le registre
+    DESTINATION_REGISTRY_IMAGE_VERSION: main # Ici mettez le nom que vous voulez donner à sa version
+  allow_failure: true # Autoriser les échecs globalement sur le pipeline (si désactivé vous pourriez ne pas pouvoir déclencher votre job à la création du pipeline si d'autres étapes sont classées avant)
+  rules:
+    - when: manual # Vous permet de déclencher votre construction manuellement en utilisant le bouton sur l'interface Gitlab
+
+deploy-my-pod:
+    extends: .deploy-image # Étendre la job générique
+    stage: 🚀deploy
+    variables: # Remplissez les variables dans cette section (veuillez vous référer à la documentation ci-dessous pour la liste complète)
+        CONTAINER_NAME: BlazorSAE # Nom du conteneur Docker
+        CONTAINER_IMAGE_PATH: TODO # Ici mettez l'adresse du conteneur dans le registre AVEC SA VERSION
+        NAMESPACE_TOKEN: TODO # Référence à votre token stocké dans GitLab
+        NAMESPACE_NAME: TODO # Nom du namespace dans lequel le conteneur sera déployé
+    script: 
+      - "cd BlazorSAE/"
+    allow_failure: true # Autoriser les échecs globalement sur le pipeline (si désactivé vous pourriez ne pas pouvoir déclencher votre job à la création du pipeline si d'autres étapes sont classées avant)
+    rules:
+      - when: manual # Vous permet de déclencher votre déploiement manuellement en utilisant le bouton sur l'interface GitLab

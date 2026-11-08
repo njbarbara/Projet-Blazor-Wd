@@ -1,0 +1,24 @@
+﻿@page "/user/{Id:int}"
+
+@if (Person != null)
+{
+    <div class="card user-profile">
+       
+        <div class="card-body">
+            <button type="button" class="btn btn-danger" @onclick="() => OnBanned()">@Content</button>
+
+            <img class="card-img-top" src="@Img" alt="@Person.Id @Person.Name">
+            <h5 class="card-title">@Person.Name</h5>
+
+            <h6 class="card-subtitle mb-2 text-body-secondary">
+                @Person.Email
+            </h6>
+            <p class="card-text">
+                Is admin : @Person.IsAdmin
+            </p>
+            <p class="card-text">
+                
+            </p>
+        </div>
+    </div>
+}

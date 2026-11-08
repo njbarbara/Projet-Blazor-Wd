@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Title" xml:space="preserve">
+    <value>items List</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="Admin_Brand" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="Counter" xml:space="preserve">
+    <value>Counter</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="AddNewUser" xml:space="preserve">
+    <value>Add New User</value>
+  </data>
+  <data name="ListUsers" xml:space="preserve">
+    <value>List of users</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteConfirmation" xml:space="preserve">
+    <value>Delete Confirmation</value>
+  </data>
+  <data name="Col_Id" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="Col_UserName" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="Col_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Col_ProfilePicture" xml:space="preserve">
+    <value>Profile picture</value>
+  </data>
+  <data name="Col_IsAdmin" xml:space="preserve">
+    <value>IsAdmin</value>
+  </data>
+  <data name="Col_IsBanned" xml:space="preserve">
+    <value>IsBanned</value>
+  </data>
+  <data name="Add_Title" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Label_Name" xml:space="preserve">
+    <value>Name :</value>
+  </data>
+  <data name="Placeholder_Name" xml:space="preserve">
+    <value>Enter the username</value>
+  </data>
+  <data name="Label_Email" xml:space="preserve">
+    <value>Email :</value>
+  </data>
+  <data name="Placeholder_Email" xml:space="preserve">
+    <value>Enter email</value>
+  </data>
+  <data name="Label_IsAdmin" xml:space="preserve">
+    <value>Administrateur</value>
+  </data>
+  <data name="Button_Submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="Error_Unhandled" xml:space="preserve">
+    <value>An unhandled error has occurred.</value>
+  </data>
+  <data name="Reload" xml:space="preserve">
+    <value>Reload</value>
+  </data>
+  <data name="Dismiss" xml:space="preserve">
+    <value>Dismiss</value>
+  </data>
+  <data name="Home_WelcomeMessage" xml:space="preserve">
+    <value>Welcome on our Admin website</value>
+  </data>
+  <data name="ListMessage" xml:space="preserve">
+    <value>List of messages</value>
+  </data>
+  <data name="Col_content" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="Col_Bad" xml:space="preserve">
+    <value>Reported</value>
+  </data>
+  <data name="ReportMessages" xml:space="preserve">
+    <value>Reported Messages</value>
+  </data>
+  <data name="CurrentCulture_Label" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Carrousel1" xml:space="preserve">
+    <value>The carousel above is</value>
+  </data>
+  <data name="Carrousel2" xml:space="preserve">
+    <value>an overview of the different pages</value>
+  </data>
+  <data name="Carrousel3" xml:space="preserve">
+    <value>of our Blazor application</value>
+  </data>
+  <data name="Carrousel4" xml:space="preserve">
+    <value>(built with MudBlazor):</value>
+  </data>
+  <data name="UserList1" xml:space="preserve">
+    <value>The list of users with information,</value>
+  </data>
+  <data name="UserList2" xml:space="preserve">
+    <value>the ability to delete and modify</value>
+  </data>
+  <data name="UserList3" xml:space="preserve">
+    <value>their name.</value>
+  </data>
+  <data name="MessageList1" xml:space="preserve">
+    <value>The list of messages, </value>
+  </data>
+  <data name="UserList4" xml:space="preserve">
+    <value>their name.</value>
+  </data>
+  <data name="MessageList2" xml:space="preserve">
+    <value>including reported messages.</value>
+  </data>
+  <data name="ProfilePic" xml:space="preserve">
+    <value>Each user's profile picture.</value>
+  </data>
+  <data name="Settings1" xml:space="preserve">
+    <value>Settings such as</value>
+  </data>
+  <data name="Settings2" xml:space="preserve">
+    <value>the application language.</value>
+  </data>
+</root>

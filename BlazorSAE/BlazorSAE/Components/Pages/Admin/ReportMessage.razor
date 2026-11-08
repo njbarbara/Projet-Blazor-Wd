@@ -1,0 +1,24 @@
+﻿@page "/Admin/reportmessages"
+@using BlazorSAE.Models
+
+<h3>@Localizer["ReportMessages"]</h3>
+
+<div class="grid-card card">
+<QuickGrid TGridItem="MessageModel" ItemsProvider="@GetReportMessage" Pagination="Pagination" class="quick-grid">
+       
+
+    <TemplateColumn Title="@Localizer["Actions"]">
+        <a href="user/@(context.Id)" class="btn btn-primary" style="background-color: #4CAF50;">View</a>
+    </TemplateColumn>
+    
+    <PropertyColumn Property="@(p => p.Id)" Title="@Localizer["Col_Id"]" Sortable="true" />
+    <PropertyColumn Property="@(p => p.User.Name)" Title="@Localizer["Col_UserName"]" Sortable="true" />
+    <PropertyColumn Property="@(p => p.Content)" Title="@Localizer["Col_content"]" Sortable="true" />
+        <PropertyColumn Property="@(p => p.Date)" Title="Date" Sortable="true" />
+    <PropertyColumn Property="@(p => p.isReport)" Title="@Localizer["Col_Bad"]" Sortable="true" />
+    
+
+</QuickGrid>
+
+<Paginator State="Pagination" />
+</div>

@@ -1,0 +1,422 @@
+[
+    {
+        "id": 1,
+        "user": {
+            "id": 1,
+            "name": "Crosby Burns",
+            "profilePic": "kermit.jpg",
+            "email": "crosbyburns@biotica.com",
+            "isAdmin": true,
+            "isBanned": true
+        },
+        "content": "Bonjour à tous, nouveau déploiement effectué.",
+        "date": "2026-01-12",
+        "report": false
+    },
+    {
+        "id": 2,
+        "user": {
+            "id": 2,
+            "name": "Barr Dale",
+            "profilePic": "kermit.jpg",
+            "email": "barrdale@biotica.com",
+            "isAdmin": true,
+            "isBanned": false
+        },
+        "content": "Problème détecté sur la page d'accueil.",
+        "date": "2026-01-10",
+        "report": false
+    },
+    {
+        "id": 3,
+        "user": {
+            "id": 3,
+            "name": "Wheeler Townsend",
+            "profilePic": "avatar_68.jpg",
+            "email": "wheelertownsend@biotica.com",
+            "isAdmin": true,
+            "isBanned": false
+        },
+        "content": "Merci pour la mise à jour, tout fonctionne.",
+        "date": "2025-12-20",
+        "report": false
+    },
+    {
+        "id": 4,
+        "user": {
+            "id": 4,
+            "name": "Smith Middleton",
+            "profilePic": "avatar_55.jpg",
+            "email": "smithmiddleton@biotica.com",
+            "isAdmin": false,
+            "isBanned": false
+        },
+        "content": "Puis-je avoir accès à la section admin ?",
+        "date": "2025-11-05",
+        "report": false
+    },
+    {
+        "id": 5,
+        "user": {
+            "id": 5,
+            "name": "Sophia Rios",
+            "profilePic": "avatar_9.jpg",
+            "email": "sophiarios@biotica.com",
+            "isAdmin": true,
+            "isBanned": true
+        },
+        "content": "Ce message contient un contenu inapproprié.",
+        "date": "2025-10-30",
+        "report": true
+    },
+    {
+        "id": 6,
+        "user": {
+            "id": 6,
+            "name": "Della Lester",
+            "profilePic": "avatar_33.jpg",
+            "email": "dellalester@biotica.com",
+            "isAdmin": true,
+            "isBanned": false
+        },
+        "content": "Nouvelle fonctionnalité : pagination améliorée.",
+        "date": "2025-09-15",
+        "report": false
+    },
+    {
+        "id": 7,
+        "user": {
+            "id": 7,
+            "name": "Diana Rowe",
+            "profilePic": "avatar_70.jpg",
+            "email": "dianarowe@biotica.com",
+            "isAdmin": false,
+            "isBanned": true
+        },
+        "content": "Spam détecté dans les commentaires.",
+        "date": "2025-08-04",
+        "report": true
+    },
+    {
+        "id": 8,
+        "user": {
+            "id": 8,
+            "name": "Rhoda Stone",
+            "profilePic": "avatar_56.jpg",
+            "email": "rhodastone@biotica.com",
+            "isAdmin": false,
+            "isBanned": false
+        },
+        "content": "Est?il possible d'ajouter un filtre sur les messages ?",
+        "date": "2025-07-20",
+        "report": false
+    },
+    {
+        "id": 9,
+        "user": {
+            "id": 9,
+            "name": "Merrill Swanson",
+            "profilePic": "avatar_45.jpg",
+            "email": "merrillswanson@biotica.com",
+            "isAdmin": true,
+            "isBanned": false
+        },
+        "content": "Planification d'une maintenance ce week?end.",
+        "date": "2025-06-01",
+        "report": false
+    },
+    {
+        "id": 10,
+        "user": {
+            "id": 10,
+            "name": "Bonnie Spence",
+            "profilePic": "avatar_54.jpg",
+            "email": "bonniespence@biotica.com",
+            "isAdmin": true,
+            "isBanned": true
+        },
+        "content": "Contenu offensant signalé par plusieurs utilisateurs.",
+        "date": "2025-05-02",
+        "report": true
+    },
+    {
+        "id": 11,
+        "user": {
+            "id": 11,
+            "name": "Dudley Fletcher",
+            "profilePic": "avatar_28.jpg",
+            "email": "dudleyfletcher@biotica.com",
+            "isAdmin": false,
+            "isBanned": true
+        },
+        "content": "Test de notification push.",
+        "date": "2025-04-10",
+        "report": true
+    },
+    {
+        "id": 12,
+        "user": {
+            "id": 12,
+            "name": "Margaret Patterson",
+            "profilePic": "avatar_16.jpg",
+            "email": "margaretpatterson@biotica.com",
+            "isAdmin": false,
+            "isBanned": false
+        },
+        "content": "Je rencontre une erreur 500 sur la page profil.",
+        "date": "2024-12-01",
+        "report": false
+    },
+    {
+        "id": 13,
+        "user": {
+            "id": 13,
+            "name": "Maldonado Dorsey",
+            "profilePic": "avatar_10.jpg",
+            "email": "maldonadodorsey@biotica.com",
+            "isAdmin": true,
+            "isBanned": true
+        },
+        "content": "Contenu signalé pour harcèlement.",
+        "date": "2024-11-11",
+        "report": true
+    },
+    {
+        "id": 14,
+        "user": {
+            "id": 14,
+            "name": "Harper Barry",
+            "profilePic": "avatar_23.jpg",
+            "email": "harperbarry@biotica.com",
+            "isAdmin": false,
+            "isBanned": true
+        },
+        "content": "Demande d'accès restreint pour un groupe d'utilisateurs.",
+        "date": "2024-10-02",
+        "report": true
+    },
+    {
+        "id": 15,
+        "user": {
+            "id": 15,
+            "name": "Oneal Irwin",
+            "profilePic": "avatar_1.jpg",
+            "email": "onealirwin@biotica.com",
+            "isAdmin": false,
+            "isBanned": false
+        },
+        "content": "Correction orthographique appliquée au contenu.",
+        "date": "2024-09-09",
+        "report": false
+    },
+    {
+        "id": 16,
+        "user": {
+            "id": 16,
+            "name": "Melva Garza",
+            "profilePic": "avatar_67.jpg",
+            "email": "melvagarza@biotica.com",
+            "isAdmin": true,
+            "isBanned": true
+        },
+        "content": "Signalement : usurpation d'identité.",
+        "date": "2024-08-08",
+        "report": true
+    },
+    {
+        "id": 17,
+        "user": {
+            "id": 17,
+            "name": "Lenora Willis",
+            "profilePic": "avatar_14.jpg",
+            "email": "lenorawillis@biotica.com",
+            "isAdmin": false,
+            "isBanned": true
+        },
+        "content": "Message automatisé : pas d'action requise.",
+        "date": "2024-07-07",
+        "report": true
+    },
+    {
+        "id": 18,
+        "user": {
+            "id": 18,
+            "name": "Jacobs Garrison",
+            "profilePic": "avatar_45.jpg",
+            "email": "jacobsgarrison@biotica.com",
+            "isAdmin": true,
+            "isBanned": false
+        },
+        "content": "Proposition : ajouter un tri par date.",
+        "date": "2024-06-01",
+        "report": false
+    },
+    {
+        "id": 19,
+        "user": {
+            "id": 19,
+            "name": "Marsh Morrow",
+            "profilePic": "avatar_29.jpg",
+            "email": "marshmorrow@biotica.com",
+            "isAdmin": true,
+            "isBanned": true
+        },
+        "content": "Ce message viole les conditions d'utilisation.",
+        "date": "2024-05-05",
+        "report": true
+    },
+    {
+        "id": 20,
+        "user": {
+            "id": 20,
+            "name": "Jamie Fernandez",
+            "profilePic": "avatar_50.jpg",
+            "email": "jamiefernandez@biotica.com",
+            "isAdmin": false,
+            "isBanned": true
+        },
+        "content": "Demande d'information sur les permissions.",
+        "date": "2024-04-04",
+        "report": true
+    },
+    {
+        "id": 21,
+        "user": {
+            "id": 1,
+            "name": "Crosby Burns",
+            "profilePic": "kermit.jpg",
+            "email": "crosbyburns@biotica.com",
+            "isAdmin": true,
+            "isBanned": true
+        },
+        "content": "Rappel : réunion d'équipe demain.",
+        "date": "2023-12-01",
+        "report": false
+    },
+    {
+        "id": 22,
+        "user": {
+            "id": 2,
+            "name": "Barr Dale",
+            "profilePic": "kermit.jpg",
+            "email": "barrdale@biotica.com",
+            "isAdmin": true,
+            "isBanned": false
+        },
+        "content": "Notification test : ignorez ce message.",
+        "date": "2023-11-15",
+        "report": false
+    },
+    {
+        "id": 23,
+        "user": {
+            "id": 3,
+            "name": "Wheeler Townsend",
+            "profilePic": "avatar_68.jpg",
+            "email": "wheelertownsend@biotica.com",
+            "isAdmin": true,
+            "isBanned": false
+        },
+        "content": "Contenu signalé pour spam.",
+        "date": "2023-10-10",
+        "report": true
+    },
+    {
+        "id": 24,
+        "user": {
+            "id": 4,
+            "name": "Smith Middleton",
+            "profilePic": "avatar_55.jpg",
+            "email": "smithmiddleton@biotica.com",
+            "isAdmin": false,
+            "isBanned": false
+        },
+        "content": "Suggestion : ajouter un bouton d'export CSV.",
+        "date": "2023-09-09",
+        "report": false
+    },
+    {
+        "id": 25,
+        "user": {
+            "id": 5,
+            "name": "Sophia Rios",
+            "profilePic": "avatar_9.jpg",
+            "email": "sophiarios@biotica.com",
+            "isAdmin": true,
+            "isBanned": true
+        },
+        "content": "Message contenant insultes à modérer.",
+        "date": "2023-08-08",
+        "report": true
+    },
+    {
+        "id": 26,
+        "user": {
+            "id": 6,
+            "name": "Della Lester",
+            "profilePic": "avatar_33.jpg",
+            "email": "dellalester@biotica.com",
+            "isAdmin": true,
+            "isBanned": false
+        },
+        "content": "Mise à jour: dépendances upgrade.",
+        "date": "2023-07-07",
+        "report": false
+    },
+    {
+        "id": 27,
+        "user": {
+            "id": 7,
+            "name": "Diana Rowe",
+            "profilePic": "avatar_70.jpg",
+            "email": "dianarowe@biotica.com",
+            "isAdmin": false,
+            "isBanned": true
+        },
+        "content": "Message offensant recyclé : suppression demandée.",
+        "date": "2023-06-06",
+        "report": true
+    },
+    {
+        "id": 28,
+        "user": {
+            "id": 8,
+            "name": "Rhoda Stone",
+            "profilePic": "avatar_56.jpg",
+            "email": "rhodastone@biotica.com",
+            "isAdmin": false,
+            "isBanned": false
+        },
+        "content": "Test d'interface : affichage OK.",
+        "date": "2023-05-05",
+        "report": false
+    },
+    {
+        "id": 29,
+        "user": {
+            "id": 9,
+            "name": "Merrill Swanson",
+            "profilePic": "avatar_45.jpg",
+            "email": "merrillswanson@biotica.com",
+            "isAdmin": true,
+            "isBanned": false
+        },
+        "content": "Archivage des anciens messages planifiés.",
+        "date": "2023-04-04",
+        "report": false
+    },
+    {
+        "id": 30,
+        "user": {
+            "id": 10,
+            "name": "Bonnie Spence",
+            "profilePic": "avatar_54.jpg",
+            "email": "bonniespence@biotica.com",
+            "isAdmin": true,
+            "isBanned": true
+        },
+        "content": "Signalement multiple pour harcèlement.",
+        "date": "2023-03-03",
+        "report": true
+    }
+]

@@ -1,0 +1,30 @@
+﻿@inherits LayoutComponentBase
+
+<link href="css/site.css" rel="stylesheet" />
+<script src="js/themeToggle.js"></script>
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <a href="https://docs.microsoft.com/aspnet/" target="_blank">@Localizer["About"]</a>
+
+            <div class="px-4">
+                <CultureSelector />
+            </div>
+        </div>
+
+        <article class="content px-4">
+            @Body   
+        </article>
+    </main>
+</div>
+
+<div id="blazor-error-ui" data-nosnippet>
+    @Localizer["Error_Unhandled"]
+    <a href="." class="reload">@Localizer["Reload"]</a>
+    <span class="dismiss">@Localizer["Dismiss"]</span>
+</div>

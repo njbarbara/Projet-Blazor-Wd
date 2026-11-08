@@ -1,0 +1,73 @@
+﻿@using System.Globalization
+@using MudBlazor
+@using Microsoft.Extensions.Localization
+
+@page "/"
+
+<MudPopoverProvider />
+
+<PageTitle>@ListLocalizer["Home"]</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.Medium" Class="mx-auto mt-6">
+    <MudPaper Elevation="1" Class="pa-6">
+        <MudText Typo="Typo.h4" GutterBottom="true">
+            <h1>@ListLocalizer["Home_WelcomeMessage"]</h1>
+        </MudText>
+
+        <MudText Typo="Typo.subtitle2" Color="Color.Secondary" Class="mb-4">
+            <b>@ListLocalizer["CurrentCulture_Label"]</b> : @CultureInfo.CurrentCulture
+        </MudText>
+
+        <MudDivider Class="mb-4" />
+
+    </MudPaper>
+</MudContainer>
+<MudCarousel Class="mud-width-full" Style="height:400px;" TData="object">
+    <MudCarouselItem Transition="Transition.Slide" Color="@Color.Primary">
+        <div class="d-flex" style="height:100%">
+            <MudImage Src="images/users.png" Alt="test" Class="mx-auto my-auto" Width="1000" />
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="Transition.Slide" Color="@Color.Secondary">
+        <div class="d-flex" style="height:100%">
+            <MudImage Src="images/messages.png" Alt="test" Class="mx-auto my-auto" Width="1000" />
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="Transition.Slide">
+        <div class="d-flex" style="height:100%">
+            <MudImage Src="images/signales.png" Alt="test" Class="mx-auto my-auto" Width="1000" />
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="Transition.Slide">
+        <div class="d-flex" style="height:100%">
+            <MudImage Src="images/profil_pic.png" Alt="test" Class="mx-auto my-auto" Width="200" />
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="Transition.Slide">
+        <div class="d-flex" style="height:100%">
+            <MudImage Src="images/parametres.png" Alt="test" Class="mx-auto my-auto" Width="500" />
+        </div>
+    </MudCarouselItem>
+</MudCarousel>
+
+<MudContainer MaxWidth="MaxWidth.Medium" Class="mx-auto mt-6">
+    <MudText Typo="Typo.body1" Class="mb-2">
+        @ListLocalizer["Carrousel1"] @ListLocalizer["Carrousel2"] @ListLocalizer["Carrousel3"] @ListLocalizer["Carrousel4"]
+    </MudText>
+
+    <MudList T="string" Dense="true">
+        <MudListItem>
+            <MudText Typo="Typo.body2">@ListLocalizer["UserList1"] @ListLocalizer["UserList2"] @ListLocalizer["UserList3"]</MudText>
+        </MudListItem>
+        <MudListItem>
+            <MudText Typo="Typo.body2">@ListLocalizer["MessageList1"] @ListLocalizer["MessageList2"]</MudText>
+        </MudListItem>
+        <MudListItem>
+            <MudText Typo="Typo.body2">@ListLocalizer["ProfilePic"]</MudText>
+        </MudListItem>
+        <MudListItem>
+            <MudText Typo="Typo.body2">@ListLocalizer["Settings1"] @ListLocalizer["Settings2"]</MudText>
+        </MudListItem>
+    </MudList>
+</MudContainer>
+

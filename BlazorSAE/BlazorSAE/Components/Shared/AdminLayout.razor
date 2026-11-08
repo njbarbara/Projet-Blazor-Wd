@@ -1,0 +1,45 @@
+﻿@inherits LayoutComponentBase
+@layout BasicLayout
+
+<div class="admin-wrapper">
+    <div class="admin-header">
+        <span class="bi bi-shield-lock"></span>
+        <h1>Partie Admin </h1>
+    </div>
+
+    <div class="admin-content">
+        @Body
+    </div>
+</div>
+
+<style>
+    .admin-wrapper {
+        
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .admin-header {
+        background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+
+        .admin-header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+    .admin-content {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+</style>

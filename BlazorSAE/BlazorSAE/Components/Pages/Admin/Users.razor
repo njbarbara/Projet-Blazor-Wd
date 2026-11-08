@@ -1,0 +1,46 @@
+﻿@page "/Admin/users"
+@using BlazorSAE.Models
+
+<h3>@Localizer["Users"]</h3>
+<h3>@Localizer["Welcome"]</h3>
+<p>@Localizer["ListUsers"]</p>
+
+<div>
+    <a class="btn btn-primary mb-3" href="/Admin/addUser">@Localizer["AddNewUser"]</a>
+</div>
+
+<!-- Wrapper qui s'adapte à la taille du tableau -->
+<div class="grid-card card">
+    <QuickGrid TGridItem="UserModel" ItemsProvider="@GetItems" Pagination="Pagination" class="quick-grid">
+        <TemplateColumn Title="@Localizer["Actions"]">
+            <div class="action-group">
+                <a class="btn btn-sm btn-outline" href="Edit/@(context.Id)" title="@Localizer["Edit"]"
+                    aria-label="Edit @(context.Name)">
+                    <span class="bi bi-pencil"></span>
+                    <span class="action-label">@Localizer["Edit"]</span>
+                </a>
+
+                <a class="btn btn-sm btn-outline" href="user/@(context.Id)" title="@Localizer["View"]"
+                    aria-label="View @(context.Name)">
+                    <span class="bi bi-eye"></span>
+                    <span class="action-label">@Localizer["View"]</span>
+                </a>
+
+                <button type="button" class="btn btn-sm btn-danger" @onclick="() => OnDelete(context.Id)" title="@Localizer["Delete"]"
+                    aria-label="Delete @(context.Name)">
+                    <span class="bi bi-trash"></span>
+                    <span class="action-label">@Localizer["Delete"]</span>
+                </button>
+            </div>
+        </TemplateColumn>
+
+        <PropertyColumn Property="@(p => p.Id)" Title="@Localizer["Col_Id"]" Sortable="true" />
+        <PropertyColumn Property="@(p => p.Name)" Title="@Localizer["Col_UserName"]" Sortable="true" />
+        <PropertyColumn Property="@(p => p.Email)" Title="@Localizer["Col_Email"]" Sortable="true" />
+        <PropertyColumn Property="@(p => p.ProfilePic)" Title="@Localizer["Col_ProfilePicture"]" Sortable="true" />
+        <PropertyColumn Property="@(p => p.IsAdmin)" Title="@Localizer["Col_IsAdmin"]" Sortable="true" />
+        <PropertyColumn Property="@(p => p.IsBanned)" Title="@Localizer["Col_IsBanned"]" Sortable="true" />
+    </QuickGrid>
+</div>
+
+<Paginator State="Pagination" />

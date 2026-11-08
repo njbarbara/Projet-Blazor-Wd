@@ -1,0 +1,11 @@
+[
+  '{{repeat(20)}}',
+  {
+    id: '{{index(1)}}',
+    name: '{{firstName()}} {{surname()}}',
+    profilePic: 'avatar_{{integer(1, 70)}}.jpg',
+    email: '{{email()}}',
+    isAdmin: '{{bool()}}',
+    isBanned: '{{bool()}}'
+  }
+]

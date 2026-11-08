@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Crosby Burns",
+    "profilePic": "kermit.jpg",
+    "email": "crosbyburns@biotica.com",
+    "isAdmin": true,
+    "isBanned": true
+  },
+  {
+    "id": 2,
+    "name": "Barr Dale",
+    "profilePic": "kermit.jpg",
+    "email": "barrdale@biotica.com",
+    "isAdmin": true,
+    "isBanned": false
+  },
+  {
+    "id": 3,
+    "name": "Wheeler Townsend",
+    "profilePic": "avatar_68.jpg",
+    "email": "wheelertownsend@biotica.com",
+    "isAdmin": true,
+    "isBanned": false
+  },
+  {
+    "id": 4,
+    "name": "Smith Middleton",
+    "profilePic": "avatar_55.jpg",
+    "email": "smithmiddleton@biotica.com",
+    "isAdmin": false,
+    "isBanned": false
+  },
+  {
+    "id": 5,
+    "name": "Sophia Rios",
+    "profilePic": "avatar_9.jpg",
+    "email": "sophiarios@biotica.com",
+    "isAdmin": true,
+    "isBanned": true
+  },
+  {
+    "id": 6,
+    "name": "Della Lester",
+    "profilePic": "avatar_33.jpg",
+    "email": "dellalester@biotica.com",
+    "isAdmin": true,
+    "isBanned": false
+  },
+  {
+    "id": 7,
+    "name": "Diana Rowe",
+    "profilePic": "avatar_70.jpg",
+    "email": "dianarowe@biotica.com",
+    "isAdmin": false,
+    "isBanned": true
+  },
+  {
+    "id": 8,
+    "name": "Rhoda Stone",
+    "profilePic": "avatar_56.jpg",
+    "email": "rhodastone@biotica.com",
+    "isAdmin": false,
+    "isBanned": false
+  },
+  {
+    "id": 9,
+    "name": "Merrill Swanson",
+    "profilePic": "avatar_45.jpg",
+    "email": "merrillswanson@biotica.com",
+    "isAdmin": true,
+    "isBanned": false
+  },
+  {
+    "id": 10,
+    "name": "Bonnie Spence",
+    "profilePic": "avatar_54.jpg",
+    "email": "bonniespence@biotica.com",
+    "isAdmin": true,
+    "isBanned": true
+  },
+  {
+    "id": 11,
+    "name": "Dudley Fletcher",
+    "profilePic": "avatar_28.jpg",
+    "email": "dudleyfletcher@biotica.com",
+    "isAdmin": false,
+    "isBanned": true
+  },
+  {
+    "id": 12,
+    "name": "Margaret Patterson",
+    "profilePic": "avatar_16.jpg",
+    "email": "margaretpatterson@biotica.com",
+    "isAdmin": false,
+    "isBanned": false
+  },
+  {
+    "id": 13,
+    "name": "Maldonado Dorsey",
+    "profilePic": "avatar_10.jpg",
+    "email": "maldonadodorsey@biotica.com",
+    "isAdmin": true,
+    "isBanned": true
+  },
+  {
+    "id": 14,
+    "name": "Harper Barry",
+    "profilePic": "avatar_23.jpg",
+    "email": "harperbarry@biotica.com",
+    "isAdmin": false,
+    "isBanned": true
+  },
+  {
+    "id": 15,
+    "name": "Oneal Irwin",
+    "profilePic": "avatar_1.jpg",
+    "email": "onealirwin@biotica.com",
+    "isAdmin": false,
+    "isBanned": false
+  },
+  {
+    "id": 16,
+    "name": "Melva Garza",
+    "profilePic": "avatar_67.jpg",
+    "email": "melvagarza@biotica.com",
+    "isAdmin": true,
+    "isBanned": true
+  },
+  {
+    "id": 17,
+    "name": "Lenora Willis",
+    "profilePic": "avatar_14.jpg",
+    "email": "lenorawillis@biotica.com",
+    "isAdmin": false,
+    "isBanned": true
+  },
+  {
+    "id": 18,
+    "name": "Jacobs Garrison",
+    "profilePic": "avatar_45.jpg",
+    "email": "jacobsgarrison@biotica.com",
+    "isAdmin": true,
+    "isBanned": false
+  },
+  {
+    "id": 19,
+    "name": "Marsh Morrow",
+    "profilePic": "avatar_29.jpg",
+    "email": "marshmorrow@biotica.com",
+    "isAdmin": true,
+    "isBanned": true
+  },
+  {
+    "id": 20,
+    "name": "Jamie Fernandez",
+    "profilePic": "avatar_50.jpg",
+    "email": "jamiefernandez@biotica.com",
+    "isAdmin": false,
+    "isBanned": true
+  }
+]

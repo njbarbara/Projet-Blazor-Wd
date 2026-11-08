@@ -1,0 +1,35 @@
+﻿@page "/Admin/messages"
+@using BlazorSAE.Models
+
+<h3>@Localizer["Messages"]</h3>
+<p class="kicker">@Localizer["ListMessage"]</p>
+
+<div class="grid-card card">
+    <QuickGrid TGridItem="MessageModel" ItemsProvider="@GetItemsMessage" Pagination="Pagination" class="quick-grid">
+        <TemplateColumn Title="@Localizer["Actions"]" class="actions-cell">
+            <div class="action-group">
+                <a class="btn btn-sm btn-outline" href="user/@(context.User?.Id)" title="@Localizer["View"]" aria-label="View @(context.User?.Name)">
+                    <span class="bi bi-eye"></span>
+                    <span class="action-label">@Localizer["View"]</span>
+                </a>
+                <button type="button" class="btn btn-sm btn-danger" @onclick="() => OnDeleteMessage(context.Id)" title="@Localizer["Delete"]"
+                    aria-label="Delete">
+                    <span class="bi bi-trash"></span>
+                    <span class="action-label">@Localizer["Delete"]</span>
+                </button>
+            </div>
+        </TemplateColumn>
+
+        <PropertyColumn Property="@(p => p.Id)" Title="@Localizer["Col_Id"]" Sortable="true" />
+        <TemplateColumn Title="@Localizer["Col_UserName"]">
+            @context.User?.Name
+        </TemplateColumn>
+        <TemplateColumn Title="@Localizer["Col_content"]">
+            <div class="message-content">@context.Content</div>
+        </TemplateColumn>
+        <PropertyColumn Property="@(p => p.Date)" Title="Date" Sortable="true" />
+        <PropertyColumn Property="@(p => p.isReport)" Title="@Localizer["Col_Bad"]" Sortable="true" />
+    </QuickGrid>
+</div>
+
+<Paginator State="Pagination" />

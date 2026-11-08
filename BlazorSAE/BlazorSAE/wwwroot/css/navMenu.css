@@ -1,0 +1,221 @@
+﻿:root {
+    --nav-transition: 0.28s;
+    --nav-ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Barre supérieure */
+.top-row {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    color: white;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease;
+}
+
+    .navbar-brand:hover {
+        transform: scale(1.05);
+    }
+
+/* Toggle button */
+.navbar-toggler {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    z-index: 1001;
+    appearance: none;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+    .navbar-toggler:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(1.1);
+    }
+
+    .navbar-toggler:checked {
+        background: rgba(255, 255, 255, 0.4);
+    }
+
+/* Menu de navigation */
+.nav-scrollable {
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width: 400px;
+    height: 100vh;
+    background: linear-gradient(180deg, #2c3e50 0%, #1a252f 100%);
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+    z-index: 999;
+    padding-top: 80px;
+}
+
+.navbar-toggler:checked ~ .nav-scrollable {
+    left: 0;
+}
+
+    /* Overlay quand le menu est ouvert */
+    .navbar-toggler:checked ~ .nav-scrollable::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 300px;
+        width: calc(100vw - 300px);
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+
+/* Navigation items */
+.nav {
+    padding: 0;
+}
+
+.nav-item {
+    margin: 8px 16px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    color: #e0e0e0 !important;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    position: relative;
+    /* Permettre au texte long de s'afficher sur plusieurs lignes */
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.2;
+    /* suppression de overflow:hidden pour ne pas tronquer le texte */
+}
+
+    .nav-link::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 3px;
+        background: linear-gradient(180deg, #667eea, #764ba2);
+        transform: scaleY(0);
+        transition: transform 0.3s ease;
+    }
+
+    .nav-link:hover {
+        background: rgba(102, 126, 234, 0.1);
+        color: white !important;
+        transform: translateX(5px);
+    }
+
+        .nav-link:hover::before {
+            transform: scaleY(1);
+        }
+
+    .nav-link.active {
+        background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+        color: white !important;
+        font-weight: 600;
+    }
+
+        .nav-link.active::before {
+            transform: scaleY(1);
+        }
+
+    /* Icônes */
+    .nav-link span[class*="bi"] {
+        margin-right: 12px;
+        font-size: 1.2rem;
+        min-width: 24px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+/* Scrollbar personnalisée */
+.nav-scrollable::-webkit-scrollbar {
+    width: 6px;
+}
+
+.nav-scrollable::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-scrollable::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+}
+
+    .nav-scrollable::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+@media (min-width: 768px) {
+    .navbar-toggler {
+        display: none;
+    }
+
+    .nav-scrollable {
+        left: 0;
+        position: relative;
+        width: 300px;
+        height: calc(100vh - 60px);
+        padding-top: 20px;
+    }
+
+        .nav-scrollable::before {
+            display: none !important;
+        }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.nav-item {
+    animation: slideIn 0.3s ease forwards;
+}
+
+    .nav-item:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    .nav-item:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .nav-item:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+
+    .nav-item:nth-child(4) {
+        animation-delay: 0.4s;
+    }

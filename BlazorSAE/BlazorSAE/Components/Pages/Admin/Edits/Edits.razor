@@ -1,0 +1,33 @@
+﻿@page "/Edit/{Id:int}"
+
+
+<h3>Edit</h3>
+
+<EditForm Model="@user" OnValidSubmit="@HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="mb-3">
+        <label class="form-label" for="name">
+            Name :
+            <InputText class="form-control" id="name" placeholder="Enter the  username" @bind-Value="user.Name" />
+        </label>
+    </div>
+
+
+
+    <div class="mb-3">
+        <label class="form-label" for="email">
+            Email :
+            <InputText class="form-control" id="email" placeholder="Enter email" @bind-Value="user.Email" />
+        </label>
+    </div>
+
+    <div class="mb-3 form-check">
+        <InputCheckbox class="form-check-input" id="isAdmin" @bind-Value="user.IsAdmin" />
+        <label class="form-check-label" for="isAdmin">
+            Administrateur
+        </label>
+    </div>
+    <button type="submit">Submit</button>
+</EditForm>

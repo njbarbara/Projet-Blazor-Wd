@@ -1,0 +1,12 @@
+﻿@page "/settings"
+@using System.Globalization
+
+<h3>@Localizer["Settings"]</h3>
+
+<p>@Localizer["CurrentCulture_Label"]: @CurrentCultureDisplay</p>
+
+<div>
+    <button class="btn btn-primary" @onclick='() => SetCulture("fr-FR")'>Français</button>
+    <button class="btn btn-primary" @onclick='() => SetCulture("en-US")'>English</button>
+</div>
+

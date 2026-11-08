@@ -1,0 +1,38 @@
+﻿@using BlazorSAE.Components.Pages
+<!--<CascadingBlazoredModal>
+    <Router AppAssembly="typeof(Program).Assembly">
+        <Found Context="routeData">
+            <RouteView RouteData="routeData" DefaultLayout="typeof(Shared.BasicLayout)" />
+            <FocusOnNavigate RouteData="routeData" Selector="h1" />
+        </Found>
+
+        <NotFound>-->
+            <!--Il faut créer une page par défaut pour l'erreur 404-->
+<!--<LayoutView Layout="@typeof(Shared.BasicLayout)">
+            <NotFoundPage />
+        </NotFound>
+    </Router>
+</CascadingBlazoredModal>-->
+
+<CascadingBlazoredModal>
+    <Router AppAssembly="@typeof(App).Assembly">
+        <Found Context="routeData">
+            <RouteView RouteData="@routeData"
+                       DefaultLayout="@typeof(BasicLayout)" />
+            <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+        </Found>
+
+        <NotFound>
+            <LayoutView Layout="@typeof(BasicLayout)">
+                <h3>404</h3>
+                <p>Page not found</p>
+                <a href="/">Go back to home</a>
+            </LayoutView>
+        </NotFound>
+    </Router>
+</CascadingBlazoredModal>
+
+
+
+
+
